@@ -12,6 +12,7 @@
   --text-color: #333333;
   --primary-color: #14cfae;
   --secondary-color: #1c4b43;
+  --tertiary-color: #007bff;
 }
 
 /* 3. Base Styles */
@@ -41,6 +42,16 @@ header {
   align-items: center;
 }
 
+.header-nav {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.logo img {
+  width: 8.8rem;
+  margin: 0;
+}
+
 main {
   max-width: 1200px;
   margin: 2rem auto;
@@ -54,14 +65,13 @@ img {
 /* 5. Navigation */
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 0.2rem;
 }
-
+a {
+  transition: all 0.2s ease-in;
+}
 nav a {
   color: inherit;
   text-decoration: none;
-  transition: all 0.2s ease-in;
   padding: 0.2em 0.7em;
 }
 
@@ -75,9 +85,17 @@ nav a:focus {
 
 /* 6. Utility Classes */
 
-.logo img {
-  width: 8.8rem;
-  margin: 0;
+.links {
+  color: inherit;
+}
+
+.links:hover,
+.links:focus {
+  color: var(--secondary-color);
+}
+
+.links:active {
+  color: var(--tertiary-color);
 }
 
 /* 7. Footer */
@@ -86,4 +104,20 @@ footer {
   font-size: 0.9rem;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+
+/* 8. Grid */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.portfolio a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
