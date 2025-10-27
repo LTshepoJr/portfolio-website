@@ -48,16 +48,27 @@
   /* Font Weight */
   --fw-reg: 300;
   --fw-bold: 900;
+
+  /* Font Weight */
+  --br: 10px;
 }
 
 /* 3. Media Queries */
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   :root {
     /* Font Size */
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    /* Font Size */
+    --fs-h1: 2.7rem;
+    --fs-h2: 3rem;
   }
 }
 
@@ -196,7 +207,12 @@ nav a:focus {
 .section_subtitle-intro,
 .section_subtitle-about {
   background-color: var(--rust);
+  color: var(--bg-color);
   margin-bottom: 1em;
+}
+
+.block {
+  display: block;
 }
 
 /* 7. Footer */
@@ -220,4 +236,41 @@ footer {
   justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+/* 8. Introduction */
+.intro {
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .intro-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    border-radius: var(--br);
+  }
+
+  .section_subtitle-intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.25em);
+    padding: 0.2em 0.5em;
+    border-radius: var(--br);
+  }
 }
