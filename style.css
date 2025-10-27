@@ -90,7 +90,7 @@ footer {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1;
 }
 
 h1 {
@@ -196,6 +196,7 @@ nav a:focus {
 .section_subtitle-intro,
 .section_subtitle-about {
   background-color: var(--rust);
+  margin-bottom: 1em;
 }
 
 /* 7. Footer */
