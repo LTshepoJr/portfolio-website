@@ -51,6 +51,9 @@
 
   /* Font Weight */
   --br: 10px;
+
+  /* Font Weight */
+  --header-h: 4em;
 }
 
 /* 3. Media Queries */
@@ -61,6 +64,10 @@
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
+
+    /* Font Weight */
+    --header-h: 6em;
+    scroll-padding-top: calc(var(--header-h) + 8px);
   }
 }
 
@@ -69,12 +76,16 @@
     /* Font Size */
     --fs-h1: 2.7rem;
     --fs-h2: 3rem;
+
+    /* Font Weight */
+    --header-h: 4.5em;
   }
 }
 
 /* 3. Base Styles */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) - 1px);
 }
 
 body {
@@ -90,7 +101,7 @@ strong {
 }
 
 /* 4. Layout Wrappers */
-header,
+
 nav,
 main,
 aside,
@@ -118,6 +129,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: var(--powder-blue);
+  width: 98%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: var(--br);
+  z-index: 1;
+  height: var(--header-h);
 }
 
 .header-nav {
@@ -134,6 +154,7 @@ main {
   max-width: 1200px;
   margin: 2em auto;
   padding: 1em;
+  margin-top: var(--header-h);
 }
 
 img {
@@ -206,9 +227,12 @@ nav a:focus {
 
 .section_subtitle-intro,
 .section_subtitle-about {
+  margin-bottom: 1em;
+}
+
+.rust-white {
   background-color: var(--rust);
   color: var(--bg-color);
-  margin-bottom: 1em;
 }
 
 .block {
@@ -272,5 +296,11 @@ footer {
     width: calc(100% + 1.25em);
     padding: 0.2em 0.5em;
     border-radius: var(--br);
+  }
+}
+
+@media (min-width: 900px) {
+  .intro {
+    gap: 2.8em;
   }
 }
