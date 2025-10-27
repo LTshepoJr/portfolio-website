@@ -5,14 +5,56 @@
   box-sizing: border-box;
 }
 
+/* Downloaded Font */
+@font-face {
+  font-family: "Rooster";
+  src: url("/font/ROOSTER\ PERSONAL\ USE.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* 2. Root Variables (optional) */
 :root {
-  --font-family: "Inter", Arial, sans-serif;
-  --bg-color: #ffffff;
+  /* Font Family */
+  --ff-primary: Georgia, "Times New Roman", Times, serif;
+  --ff-secondary: "Rooster", Georgia, "Times New Roman", Times, serif;
+
+  /* Color Palette */
+  --bg-color: #fff;
   --text-color: #333333;
   --primary-color: #14cfae;
   --secondary-color: #1c4b43;
   --tertiary-color: #007bff;
+
+  /* Color Palette IMG 3924 */
+  --rust: #a65630ff;
+  --powder-blue: #a1b2ddff;
+  --sienna: #893419ff;
+  --licorice: #281e1eff;
+  --onyx: #3d3d3fff;
+
+  /* Color Palette IMG 3924 2 */
+  --onyx: #3d3d3fff;
+  --caput-mortuum: #632416ff;
+  --khaki: #aea49aff;
+  --rich-black: #090a11ff;
+  --rust: #a65630ff;
+
+  /* Font Size */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+}
+
+/* 3. Media Queries */
+@media (min-width: 600px) {
+  :root {
+    /* Font Size */
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-h3: 1.125rem;
+  }
 }
 
 /* 3. Base Styles */
@@ -21,7 +63,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--ff-primary);
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -84,6 +126,13 @@ nav a:focus {
 }
 
 /* 6. Utility Classes */
+.no-select {
+  cursor: not-allowed;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older IE/Edge */
+  user-select: none; /* Standard syntax */
+}
 
 .links {
   color: inherit;
