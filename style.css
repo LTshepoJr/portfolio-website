@@ -13,7 +13,7 @@
   font-style: normal;
 }
 
-/* 2. Root Variables (optional) */
+/* 2. Root Variables */
 :root {
   /* Font Family */
   --ff-primary: Georgia, "Times New Roman", Times, serif;
@@ -25,7 +25,6 @@
   --tertiary-color: #007bff;
 
   /* Color Palette IMG 3924 */
-  --rust: #a65630ff;
   --powder-blue: #a1b2ddff;
   --sienna: #893419ff;
   --onyx: #3d3d3fff;
@@ -35,16 +34,20 @@
   --caput-mortuum: #632416ff;
   --khaki: #aea49aff;
   --rich-black: #090a11ff;
-  --rust: #a65630ff;
 
   /* Color Palette USAGE */
   --bg-color: #fff;
   --licorice: #281e1eff;
+  --rust: #a65630ff;
 
   /* Font Size */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
+
+  /* Font Weight */
+  --fw-reg: 300;
+  --fw-bold: 900;
 }
 
 /* 3. Media Queries */
@@ -71,13 +74,17 @@ body {
   line-height: 1.6;
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
 /* 4. Layout Wrappers */
 header,
 nav,
 main,
 aside,
 footer {
-  padding: 1rem;
+  padding: 1em;
 }
 
 h1,
@@ -104,18 +111,18 @@ header {
 
 .header-nav {
   display: flex;
-  gap: 0.2rem;
+  gap: 0.2em;
 }
 
 .logo img {
-  width: 8.8rem;
+  width: 8.8em;
   margin: 0;
 }
 
 main {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 2em auto;
+  padding: 1em;
 }
 
 img {
@@ -153,6 +160,10 @@ nav a:focus {
   user-select: none; /* Standard syntax */
 }
 
+.rooster {
+  font-family: var(--ff-secondary);
+}
+
 .links {
   color: inherit;
 }
@@ -166,20 +177,40 @@ nav a:focus {
   color: var(--tertiary-color);
 }
 
+.section_title {
+  margin-bottom: 0.25em;
+}
+
+.section_title-intro {
+  font-weight: var(--fw-reg);
+}
+
+.section_title-intro strong {
+  display: block;
+}
+
+.section_subtitle {
+  font-size: var(--fs-h3);
+}
+
+.section_subtitle-intro,
+.section_subtitle-about {
+  background-color: var(--rust);
+}
+
 /* 7. Footer */
 footer {
   text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 1em 0;
+  margin-top: 2em;
 }
 
 /* 8. Grid */
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1em;
+  padding: 1em;
 }
 
 .portfolio a {
