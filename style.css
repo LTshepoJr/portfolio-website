@@ -106,7 +106,6 @@ strong {
 
 /* 4. Layout Wrappers */
 
-nav,
 main,
 aside,
 footer {
@@ -142,11 +141,11 @@ header {
   border-radius: var(--br);
   z-index: 1000;
   height: var(--header-h);
+  padding: 0 1em;
 }
 
 .header-nav {
   display: flex;
-  gap: 0.2em;
 }
 
 .logo img {
