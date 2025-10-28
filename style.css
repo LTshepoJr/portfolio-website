@@ -19,26 +19,17 @@
   --ff-primary: Georgia, "Times New Roman", Times, serif;
   --ff-secondary: "Rooster", Georgia, "Times New Roman", Times, serif;
 
-  /* Color Palette */
-  --primary-color: #14cfae;
-  --secondary-color: #1c4b43;
-  --tertiary-color: #007bff;
-
-  /* Color Palette IMG 3924 */
-  --powder-blue: #a1b2ddff;
-  --sienna: #893419ff;
-  --onyx: #3d3d3fff;
-
   /* Color Palette IMG 3924 2 */
   --onyx: #3d3d3fff;
-  --caput-mortuum: #632416ff;
   --khaki: #aea49aff;
-  --rich-black: #090a11ff;
 
   /* Color Palette USAGE */
   --bg-color: #fff;
   --licorice: #281e1eff;
   --rust: #a65630ff;
+  --rich-black: #090a11ff;
+  --caput-mortuum: #632416ff;
+  --sienna: #893419ff;
 
   /* Font Size */
   --fs-h1: 3rem;
@@ -112,6 +103,10 @@ footer {
   padding: 1em;
 }
 
+section {
+  margin: 2em 0em;
+}
+
 h1,
 h2,
 h3 {
@@ -133,7 +128,6 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: var(--powder-blue);
   width: 98%;
   top: 0;
   left: 50%;
@@ -165,6 +159,13 @@ img {
   display: block;
 }
 
+nav a:hover,
+nav a:focus,
+.links:hover,
+.links:focus {
+  border-radius: 5em;
+}
+
 /* 5. Navigation */
 nav ul {
   list-style: none;
@@ -180,10 +181,13 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: var(--primary-color);
-  padding: 0.4em 1em;
+  background-color: var(--bg-color);
   border-radius: 5em;
-  color: var(--secondary-color);
+  color: var(--rust);
+}
+
+nav a:active {
+  background-color: var(--caput-mortuum);
 }
 
 /* 6. Utility Classes */
@@ -200,16 +204,11 @@ nav a:focus {
 }
 
 .links {
-  color: inherit;
-}
-
-.links:hover,
-.links:focus {
-  color: var(--secondary-color);
-}
-
-.links:active {
-  color: var(--tertiary-color);
+  color: var(--bg-color);
+  background-color: var(--caput-mortuum);
+  padding: 0.7em 0.95em;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .section_title {
@@ -233,7 +232,8 @@ nav a:focus {
   margin-bottom: 1em;
 }
 
-.rust-white {
+.rust-white,
+.links:active {
   background-color: var(--rust);
   color: var(--bg-color);
 }
@@ -312,4 +312,32 @@ footer {
   .intro {
     gap: 2.8em;
   }
+}
+
+/* 8. My Services */
+.my-services {
+  background-color: var(--rich-black);
+  background-image: url("/images/services-bg.jpg");
+  background-size: cover;
+  color: var(--bg-color);
+  text-align: center;
+  padding: 1.7em 1em;
+}
+
+.section_title-services {
+  position: relative;
+  color: var(--sienna);
+}
+
+.section_title-services::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--khaki);
+}
+
+.service {
+  margin: 1.6em 0;
 }
