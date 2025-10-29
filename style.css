@@ -1,4 +1,4 @@
-/* 1. CSS Reset / Normalize */
+/* CSS Reset / Normalize */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
   font-style: normal;
 }
 
-/* 2. Root Variables */
+/* Root Variables */
 :root {
   /* Font Family */
   --ff-primary: Georgia, "Times New Roman", Times, serif;
@@ -51,7 +51,7 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-/* 3. Media Queries */
+/* Media Queries */
 @media (min-width: 600px) {
   :root {
     /* Font Size */
@@ -85,7 +85,7 @@
   }
 }
 
-/* 3. Base Styles */
+/* Base Styles */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) - 1px);
@@ -103,7 +103,7 @@ strong {
   font-weight: var(--fw-bold);
 }
 
-/* 4. Layout Wrappers */
+/* Layout Wrappers */
 
 main,
 aside,
@@ -168,7 +168,7 @@ img {
   margin: 1.5em auto 0.5em;
 }
 
-/* 5. Navigation */
+/* Navigation */
 nav ul {
   list-style: none;
 }
@@ -192,7 +192,7 @@ nav a:active {
   background-color: var(--caput-mortuum);
 }
 
-/* 6. Utility Classes */
+/* Utility Classes */
 .no-select {
   cursor: not-allowed;
   -webkit-user-select: none; /* For Safari */
@@ -216,14 +216,6 @@ nav a:active {
   font-weight: var(--fw-bold);
 }
 
-nav a:hover,
-nav a:focus,
-.btn:hover,
-.btn:focus {
-  border-radius: 5em;
-  transform: scale(1.1);
-}
-
 nav a:focus,
 .btn:focus {
   outline: 3px solid var(--khaki);
@@ -236,10 +228,6 @@ nav a:focus,
 
 .section_title-intro {
   font-weight: var(--fw-reg);
-}
-
-.section_title-intro strong {
-  display: block;
 }
 
 .section_subtitle {
@@ -261,30 +249,16 @@ nav a:focus,
   display: block;
 }
 
-/* 7. Footer */
-footer {
-  text-align: center;
-  padding: 1em 0;
-  margin-top: 2em;
+/* Navigation */ /* Utility Classes */
+nav a:hover,
+nav a:focus,
+.btn:hover,
+.btn:focus {
+  border-radius: 5em;
+  transform: scale(1.1);
 }
 
-/* 8. Grid */
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  padding: 1em;
-}
-
-.portfolio a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* 8. Introduction */
+/* Introduction */
 .intro {
   position: relative;
 }
@@ -354,7 +328,7 @@ footer {
   }
 }
 
-/* 8. My Services */
+/* My Services */
 .my-services {
   background-color: var(--rich-black);
   background-image: url("/images/services-bg.jpg");
@@ -362,6 +336,7 @@ footer {
   color: var(--bg-color);
   text-align: center;
   padding: 1.7em 1em;
+  box-shadow: var(--bs);
   border-radius: var(--br);
 }
 
@@ -398,4 +373,29 @@ footer {
   .section_title-services::after {
     margin: 0.5em auto;
   }
+}
+
+/* About Me */
+
+/* My Work */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
+}
+
+.portfolio a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
 }
