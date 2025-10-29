@@ -164,10 +164,6 @@ img {
   display: block;
 }
 
-.service h3 {
-  margin: 1.5em auto 0.5em;
-}
-
 /* Navigation */
 nav ul {
   list-style: none;
@@ -249,7 +245,12 @@ nav a:focus,
   display: block;
 }
 
-/* Navigation */ /* Utility Classes */
+.img-border {
+  border-radius: var(--br);
+  box-shadow: var(--bs);
+}
+
+/* Main Combo */
 nav a:hover,
 nav a:focus,
 .btn:hover,
@@ -258,25 +259,32 @@ nav a:focus,
   transform: scale(1.1);
 }
 
+@media (max-width: 600px) {
+  .section_subtitle-intro,
+  .section_subtitle-about {
+    border-radius: var(--br);
+    padding: 0.2em 0.1em;
+  }
+}
+
+.service,
+.about {
+  margin: 1.6em auto;
+  max-width: 500px;
+}
+
+.service h3,
+.about h3 {
+  margin: 1.5em auto 0.5em;
+}
+
 /* Introduction */
 .intro {
   position: relative;
 }
 
 .intro-img {
-  box-shadow: var(--bs);
   display: inline-block;
-}
-
-@media (max-width: 600px) {
-  .intro-img {
-    border-radius: var(--br);
-  }
-
-  .section_subtitle-intro {
-    border-radius: var(--br);
-    padding: 0.2em 0.1em;
-  }
 }
 
 @media (min-width: 600px) {
@@ -295,7 +303,6 @@ nav a:focus,
     grid-area: img;
     min-width: 250px;
     position: relative;
-    border-radius: var(--br);
     z-index: 2;
   }
 
@@ -336,8 +343,6 @@ nav a:focus,
   color: var(--bg-color);
   text-align: center;
   padding: 1.7em 1em;
-  box-shadow: var(--bs);
-  border-radius: var(--br);
 }
 
 .section_title-services {
@@ -352,11 +357,6 @@ nav a:focus,
   height: 1px;
   margin: 0.5em auto 1em;
   background: var(--khaki);
-}
-
-.service {
-  margin: 1.6em auto;
-  max-width: 500px;
 }
 
 @media (min-width: 600px) {
@@ -376,6 +376,11 @@ nav a:focus,
 }
 
 /* About Me */
+@media (max-width: 600px) {
+  .about-me {
+    text-align: center;
+  }
+}
 
 /* My Work */
 .portfolio {
