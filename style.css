@@ -382,6 +382,45 @@ nav a:focus,
   }
 }
 
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 1em;
+  }
+
+  .section_title-about {
+    grid-area: title;
+  }
+
+  .about_me-img {
+    grid-area: img;
+    position: relative;
+    min-width: 101%;
+    z-index: 2;
+  }
+
+  .section_subtitle-about {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: 0;
+    width: calc(100% + 0.3em);
+    padding: 0.2em 0.5em;
+    border-radius: var(--br);
+  }
+}
+
+@media (min-width: 900px) {
+  .about-me {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
 /* My Work */
 .portfolio {
   display: grid;
