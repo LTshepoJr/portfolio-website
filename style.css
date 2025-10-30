@@ -19,10 +19,6 @@
   --ff-primary: Georgia, "Times New Roman", Times, serif;
   --ff-secondary: "Rooster", Georgia, "Times New Roman", Times, serif;
 
-  /* Color Palette IMG 3924 2 */
-  --onyx: #3d3d3fff;
-  --khaki: #aea49aff;
-
   /* Color Palette USAGE */
   --bg-color: #fff;
   --licorice: #281e1eff;
@@ -30,6 +26,8 @@
   --rich-black: #090a11ff;
   --caput-mortuum: #632416ff;
   --sienna: #893419ff;
+  --onyx: #3d3d3fff;
+  --khaki: #aea49aff;
 
   /* Font Size */
   --fs-h1: 3rem;
@@ -245,7 +243,8 @@ nav a:focus,
   display: block;
 }
 
-.img-border {
+.img-border,
+.my-work {
   border-radius: var(--br);
   box-shadow: var(--bs);
 }
@@ -350,7 +349,8 @@ nav a:focus,
   color: var(--sienna);
 }
 
-.section_title-services::after {
+.section_title-services::after,
+.section_title-work::after {
   content: "";
   display: block;
   width: 3em;
@@ -422,6 +422,13 @@ nav a:focus,
 }
 
 /* My Work */
+.my-work {
+  background-color: var(--onyx);
+  color: var(--rust);
+  text-align: center;
+  padding: 2em 1em 0;
+}
+
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
