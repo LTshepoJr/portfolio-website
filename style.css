@@ -211,7 +211,8 @@ nav a:active {
 }
 
 nav a:focus,
-.btn:focus {
+.btn:focus,
+.portfolio_item:focus {
   outline: 3px solid var(--khaki);
   outline-offset: 3px;
 }
@@ -431,9 +432,8 @@ nav a:focus,
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  padding: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1em 1em 2em;
 }
 
 .portfolio a {
@@ -442,6 +442,31 @@ nav a:focus,
   justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.section_subtitle-work {
+  font-weight: var(--fw-bold);
+  color: var(--bg-color);
+}
+
+.portfolio_item {
+  background: var(--rust);
+  overflow: hidden;
+}
+
+.portfolio_img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio_item:focus {
+  z-index: 2;
+  position: relative;
+}
+
+.portfolio_img:hover,
+.portfolio_item:focus .portfolio_img {
+  transform: scale(1.2);
+  opacity: 0.75;
 }
 
 /* Footer */
