@@ -346,9 +346,10 @@ footer a,
 
 /* My Services */
 .my-services {
-  background-color: var(--rich-black);
+  background-color: rgba(0, 0, 0, 0.548);
   background-image: url("/images/services-bg.jpg");
   background-size: cover;
+  background-blend-mode: color-burn;
   color: var(--bg-color);
   text-align: center;
   padding: 1.7em 1em;
@@ -550,6 +551,47 @@ svg {
   .nav-link {
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
+  }
+
+  /* Hamburger Button */
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::after,
+  .hamburger::before {
+    background-color: var(--bg-color);
+    width: 2em;
+    height: 3.2px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+  }
+
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {
+    top: 6px;
+  }
+
+  .hamburger::after {
+    bottom: 6px;
+  }
+
+  .nav-toggle {
+    padding: 0.5em;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    right: 1em;
+    z-index: 1001;
   }
 }
 @media (min-width: 600px) {
