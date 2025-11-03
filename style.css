@@ -144,13 +144,19 @@ header {
   padding: 0 1em;
 }
 
-.header-nav {
+.header-list {
   display: flex;
 }
 
 .logo img {
   width: 8.8em;
   margin: 0;
+}
+
+.logo p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  text-decoration: underline;
 }
 
 main {
@@ -166,23 +172,24 @@ img {
 nav ul {
   list-style: none;
 }
+
 a {
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
 }
 
-nav a {
-  color: inherit;
-  text-decoration: none;
+.header-nav a {
   padding: 0.5em 1em;
 }
 
-nav a:hover,
-nav a:focus {
+.header-nav a:hover,
+.header-nav a:focus {
   background-color: var(--bg-color);
   color: var(--rust);
 }
 
-nav a:active {
+.header-nav a:active {
   background-color: var(--caput-mortuum);
 }
 
@@ -210,7 +217,8 @@ nav a:active {
   font-weight: var(--fw-bold);
 }
 
-nav a:focus,
+.header-nav a:focus,
+footer a:focus,
 .btn:focus,
 .portfolio_item:focus {
   outline: 3px solid var(--khaki);
@@ -253,6 +261,7 @@ nav a:focus,
 /* Main Combo */
 nav a:hover,
 nav a:focus,
+footer a,
 .btn:hover,
 .btn:focus {
   border-radius: 5em;
@@ -474,4 +483,49 @@ footer {
   text-align: center;
   padding: 1em 0;
   margin-top: 2em;
+  margin-top: 0;
+}
+
+footer h3 {
+  margin: 0em 0 0.6em;
+}
+
+.footer-social nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.footer-social h3 {
+  margin-top: 1em;
+}
+
+svg {
+  width: 30px;
+  margin-bottom: 0.11em;
+}
+
+.footer-svg svg {
+  transition: transform 0.2s ease;
+}
+.footer-svg:hover svg,
+.footer-svg:focus svg {
+  transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+  .footer-social nav ul {
+    gap: 1.5em;
+  }
+}
+
+@media (min-width: 900px) {
+  svg {
+    width: 50px;
+  }
+
+  .footer-social nav ul {
+    gap: 2.3em;
+  }
 }
