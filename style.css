@@ -592,6 +592,27 @@ svg {
     position: absolute;
     right: 1em;
     z-index: 1001;
+    cursor: pointer;
+  }
+
+  .nav-open .header-list {
+    transform: translateX(0);
+  }
+
+  .nav-open .nav-toggle {
+    position: fixed;
+  }
+
+  .nav-open .hamburger {
+    transform: rotate(0.625turn);
+  }
+
+  .nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+  }
+
+  .nav-open .hamburger::after {
+    opacity: 0;
   }
 }
 @media (min-width: 600px) {
