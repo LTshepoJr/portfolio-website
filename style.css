@@ -1,5 +1,7 @@
 /* CSS Reset / Normalize */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -155,8 +157,13 @@ header {
 
 .logo p {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-h3);
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .logo p {
+    font-size: var(--fs-h3);
+  }
 }
 
 main {
@@ -510,6 +517,7 @@ svg {
 .footer-svg svg {
   transition: transform 0.2s ease;
 }
+
 .footer-svg:hover svg,
 .footer-svg:focus svg {
   transform: scale(1.1);
@@ -615,8 +623,41 @@ svg {
     opacity: 0;
   }
 }
+
 @media (min-width: 600px) {
   .nav-toggle {
     display: none;
+  }
+}
+
+/* Individual portfolio item styles */
+
+.project {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 600px) {
+  .project h2 {
+    margin-left: 1.7em;
+  }
+}
+
+@media (min-width: 900px) {
+  .project h2 {
+    margin-left: 2.8em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project h2 {
+    margin-left: 0.8em;
   }
 }
