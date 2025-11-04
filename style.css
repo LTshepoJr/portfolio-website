@@ -87,7 +87,7 @@
 
 /* Base Styles */
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) - 1px);
 }
 
@@ -499,13 +499,18 @@ footer a,
   opacity: 0.75;
 }
 
+.fa-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Carousel */
 .carousel-container {
   position: relative;
   width: 95%;
   margin: 0px auto 50px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: var(--br);
   background: var(--khaki);
   color: var(--caput-mortuum);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
