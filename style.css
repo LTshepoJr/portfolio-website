@@ -439,6 +439,19 @@ footer a,
   }
 }
 
+.link {
+  color: var(--rust);
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: aqua;
+}
+
 /* My Work */
 .my-work {
   background-color: var(--onyx);
