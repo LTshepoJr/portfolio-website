@@ -87,7 +87,7 @@
 
 /* Base Styles */
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-padding-top: calc(var(--header-h) - 1px);
 }
 
@@ -497,6 +497,57 @@ footer a,
 .portfolio_item:focus .portfolio_img {
   transform: scale(1.2);
   opacity: 0.75;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 95%;
+  margin: 0px auto 50px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--khaki);
+  color: var(--caput-mortuum);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 2em;
+  margin: 0 0.2em 5em;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.336);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: var(--br);
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 /* Footer */
