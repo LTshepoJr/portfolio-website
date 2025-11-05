@@ -513,7 +513,7 @@ footer a,
   border-radius: var(--br);
   background: var(--khaki);
   color: var(--caput-mortuum);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--bs);
 }
 
 .carousel {
@@ -523,7 +523,6 @@ footer a,
 
 .carousel-item {
   min-width: 100%;
-  box-sizing: border-box;
   padding: 0 2em;
   margin: 0 0.2em 5em;
 }
@@ -534,7 +533,7 @@ footer a,
   transform: translateY(-50%);
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.336);
-  color: white;
+  color: var(--bg-color);
   border: none;
   cursor: pointer;
   padding: 10px 15px;
@@ -544,7 +543,7 @@ footer a,
 }
 
 .carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--rich-black);
 }
 
 .prev {
@@ -553,6 +552,37 @@ footer a,
 
 .next {
   right: 10px;
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    margin: 50px auto;
+  }
+
+  .hobbies {
+    text-align: left;
+  }
+
+  .hobbies,
+  .my-logo {
+    padding: 0 30px 0 0px;
+  }
+
+  .carousel-btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    max-width: 120px;
+  }
 }
 
 /* Footer */
