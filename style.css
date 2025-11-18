@@ -52,6 +52,7 @@
 }
 
 /* Media Queries */
+
 @media (min-width: 600px) {
   :root {
     --fs-h1: 2.7rem;
@@ -75,6 +76,12 @@
   :root {
     --fs-h1: 4rem;
     --fs-h2: 3.6rem;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  :root {
+    --fs-h3: 1.2em;
   }
 }
 
