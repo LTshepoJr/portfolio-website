@@ -80,7 +80,7 @@
 
 @media only screen and (orientation: landscape) {
   :root {
-    --fs-h3: 1.2em;
+    --fs-h3: 1em;
   }
 }
 
