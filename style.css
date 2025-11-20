@@ -54,7 +54,7 @@
 /* Media Queries */
 @media only screen and (orientation: landscape) and (max-width: 1200px) {
   :root {
-    --fs-h3: 1rem;
+    --fs-h3: 1.2rem;
   }
 }
 
@@ -759,7 +759,7 @@ svg {
     --fs-h2: 2.4rem;
   }
   .project p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
