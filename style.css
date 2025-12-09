@@ -167,6 +167,7 @@ footer {
 
 .header-list {
   display: flex;
+  gap: 0.3em;
 }
 
 .logo img {
@@ -215,6 +216,11 @@ a {
 .portfolio_item:focus {
   outline: 3px solid var(--khaki);
   outline-offset: 3px;
+}
+
+.download-pdf a {
+  background-color: var(--bg-color);
+  color: var(--rust);
 }
 
 /* Utility Classes */
@@ -675,6 +681,10 @@ svg {
   .nav-link {
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
+  }
+
+  .download-pdf a {
+    color: var(--caput-mortuum);
   }
 
   /* Hamburger Button */
